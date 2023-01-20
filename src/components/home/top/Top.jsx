@@ -8,7 +8,7 @@ const Top = () => {
         loop: 0
     })
   return (
-    <section className='min-h-screen w-full'>
+    <section className='min-h-screen w-full bg-center bg-cover bg-no-repeat' style={{backgroundImage: 'url("https://i.gifer.com/mzL.gif")'}}>
         <div className='min-h-screen w-full bg-black/80 flex flex-col items-center justify-center text-white'>
             <h1 className='sm:text-6xl text-4xl font-bold animate-rightappear'>Yarının Ötesinde</h1>
             <p className='sm:text-xl text-lg animate-leftappear'>"Hayallerimiz yarınların da ötesinde"</p>

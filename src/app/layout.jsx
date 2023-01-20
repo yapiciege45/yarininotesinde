@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="tr">
       <head />
-      <body className='bg-no-repeat bg-center bg-cover' style={{backgroundImage: 'url("https://wallpaperaccess.com/full/535628.jpg")'}}>
+      <body>
         <Header />
         <main>
         {children}
