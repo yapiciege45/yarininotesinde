@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="tr">
       <head />
-      <body>
+      <body className='bg-black text-white'>
         <Header />
         <main>
         {children}
