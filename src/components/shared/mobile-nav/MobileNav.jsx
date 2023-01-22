@@ -10,7 +10,7 @@ const MobileNav = (props) => {
   }
   return (
     <div className='lg:hidden min-h-screen w-full z-50 bg-black/80 fixed top-0 text-white text-2xl transition-all' style={backdropStyle}>
-        <div className='min-h-screen sm:w-1/2 w-3/4 bg-slate-700 fixed top-0 right-0 z-30 flex flex-col items-center transition-all' style={mobileNavStyle}>
+        <div className='min-h-screen sm:w-1/2 w-3/4 bg-black fixed top-0 right-0 z-30 flex flex-col items-center transition-all' style={mobileNavStyle}>
                 <i className="fa-solid fa-xmark absolute text-2xl top-2 right-5" onClick={() => props.setNavIsShown(false)}></i>
                 <Link href='/' className='font-bold text-2xl hover:text-orange-500 transition-colors mt-10'>Yarının Ötesinde</Link>
                 <nav className='h-full flex flex-col items-center '>
