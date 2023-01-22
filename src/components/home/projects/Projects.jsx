@@ -3,12 +3,13 @@ import Link from 'next/link'
 import { useInView } from 'react-intersection-observer';
 
 const Projects = () => {
+  const { ref: projectTitleRef, inView: projectTitleIsVisible } = useInView()
   const { ref: projectsRef, inView: projectsIsVisible } = useInView()
 
   return (
-    <div ref={projectsRef} className='h-screen w-full bg-black/80 text-white flex flex-col items-center justify-center'>
-      <h2 className={`text-4xl mb-2 font-bold ${projectsIsVisible ? 'animate-rightappear' : ''}`}>Projelerimiz</h2>
-      <div className={`flex w-full justify-center ${projectsIsVisible ? 'animate-bottomappear' : ''}`}>
+    <div className='h-screen w-full bg-black/80 text-white flex flex-col items-center justify-center'>
+      <h2 ref={projectTitleRef} className={`text-4xl mb-2 font-bold ${projectTitleIsVisible ? 'animate-rightappear' : ''}`}>Projelerimiz</h2>
+      <div ref={projectsRef} className={`flex w-full justify-center ${projectsIsVisible ? 'animate-bottomappear' : ''}`}>
         <Link href='/' className='group h-full xl:w-3/12 lg:w-4/12 md:w-5/12 w-5/12 bg-white mx-1 relative'>
           <img src="https://yarininotesinde.org/img/projects/cankiri/afis.png" alt="Çankırı afiş" className='w-full h-full' />
           <div className='absolute h-full w-full bg-black/80 top-0 lg:hidden xl:group-hover:flex flex flex-col items-center transition-all'>

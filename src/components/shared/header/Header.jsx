@@ -16,7 +16,11 @@ const Header = () => {
                     <Link href='/' className='h-full flex items-center px-4 hover:text-orange-500 hover:border-b-4 transition-all'>Yönetim Kurulu</Link>
                     <Link href='/' className='h-full flex items-center px-4 hover:text-orange-500 hover:border-b-4 transition-all'>Sponsorlar</Link>
                 </nav>
-                <i className="fa-solid fa-bars text-2xl lg:hidden block animate-leftappear" onClick={() => setNavIsShown(true)}></i>
+                <div className='w-6 h-3 lg:hidden animate-leftappear flex flex-col items-end' onClick={() => setNavIsShown(true)}>
+                    <div className='w-3/4 h-1/6 bg-white'></div>
+                    <div className='w-1/2 h-1/6 bg-white' style={{marginTop: '3px'}}></div>
+                    <div className='w-1/4 h-1/6 bg-white' style={{marginTop: '3px'}}></div>
+                </div>
             </div>
         </div>
         <MobileNav navIsShown={navIsShown} setNavIsShown={setNavIsShown} />
